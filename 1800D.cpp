@@ -41,33 +41,14 @@
 using namespace std;
 
 int main(){
-	
-	int n ; cin>>n;
- 	int arr[n];
- 	for (int i = 0; i < n; ++i)
- 	{
- 		cin>>arr[i];
- 	}
- 	sort(arr, arr+n);
- 	int cnt=0;
- 	int fst=0,lst=n-1;
- 	for (int i = lst; i >=  fst; --i)
- 	{
- 		if(arr[i]+arr[fst]>4){
- 			cnt++;
- 		}
- 		else{
- 			cnt++;
- 			int sum= arr[i];
-
- 			while(arr[fst]+sum<=4){
- 				sum+=arr[fst];
- 				fst++;
- 			}
- 		}
- 	}
- 	cout<<cnt;
+    llt{
+    	lln;
+    	string s;cin>>s;
+    	int cnt=0;
+    	for (int i = 0; i < n-2; ++i)
+    	{
+	    	if(s[i]!=s[i+2]) cnt++;
+	    }
+    	cout<<cnt+1 nl;
+    }
 }
-
-// 1 2 3 3 4
-

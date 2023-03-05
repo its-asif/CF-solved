@@ -38,36 +38,22 @@
 #define C(x) cout<< x <<endl;
 #define F i.first
 #define S i.second
+// ll arr[100000000]={0};
+
 using namespace std;
-
 int main(){
-	
-	int n ; cin>>n;
- 	int arr[n];
- 	for (int i = 0; i < n; ++i)
- 	{
- 		cin>>arr[i];
- 	}
- 	sort(arr, arr+n);
- 	int cnt=0;
- 	int fst=0,lst=n-1;
- 	for (int i = lst; i >=  fst; --i)
- 	{
- 		if(arr[i]+arr[fst]>4){
- 			cnt++;
- 		}
- 		else{
- 			cnt++;
- 			int sum= arr[i];
-
- 			while(arr[fst]+sum<=4){
- 				sum+=arr[fst];
- 				fst++;
- 			}
- 		}
- 	}
- 	cout<<cnt;
+    llt{
+    	ll n,k,b,s; cin>>n>>k>>b>>s;
+    	if(s<b*k || s>((b*k)+((k-1)*n))) {cout<<-1 nl; continue;}
+    	
+    	ll temp = b*k;
+    	if((s-(b*k)-((k-1)*(n-1)))>0) temp += (s-(b*k)-((k-1)*(n-1))) ;
+    	ll temps = s-temp;
+    	cout<< temp sp;
+    	fi(n-1){
+    		if(temps>k-1) {cout<<k-1 sp; temps-= k-1;}
+    		else {cout<<temps sp; temps=0;}
+    	}
+    	cout nl;
+    }
 }
-
-// 1 2 3 3 4
-

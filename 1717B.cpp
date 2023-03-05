@@ -38,36 +38,38 @@
 #define C(x) cout<< x <<endl;
 #define F i.first
 #define S i.second
-using namespace std;
+char v[509][509];
 
-int main(){
-	
-	int n ; cin>>n;
- 	int arr[n];
- 	for (int i = 0; i < n; ++i)
- 	{
- 		cin>>arr[i];
- 	}
- 	sort(arr, arr+n);
- 	int cnt=0;
- 	int fst=0,lst=n-1;
- 	for (int i = lst; i >=  fst; --i)
- 	{
- 		if(arr[i]+arr[fst]>4){
- 			cnt++;
- 		}
- 		else{
- 			cnt++;
- 			int sum= arr[i];
+void f(int i,int j,int n,int k){
+	if(i<0 || j<0 || i>=n || j>=n) return;
+	if(v[i][j]=='X') return;
 
- 			while(arr[fst]+sum<=4){
- 				sum+=arr[fst];
- 				fst++;
- 			}
- 		}
- 	}
- 	cout<<cnt;
+	v[i][j]= 'X';
+	f(i-k,j,n,k);
+	f(i+k,j,n,k);
+	f(i,j-k,n,k);
+	f(i,j+k,n,k);
+	f(i-1,j-1,n,k);
+	f(i+1,j+1,n,k);
+	f(i-1,j+k-1,n,k);
+	f(i+1,j-k+1,n,k);	
 }
 
-// 1 2 3 3 4
-
+using namespace std;
+int main(){
+    llt{
+    	int n,k; cin>>n>>k;
+    	fi(n){
+    		fj(n){
+    			v[i][j]='.';
+    		}
+    	}
+    	int a,b; cin>>a>>b;
+    	f(a-1,b-1,n,k);
+    	fi(n){
+    		fj(n){
+    			cout<<v[i][j];
+    		}cout nl;
+    	}
+    }
+}

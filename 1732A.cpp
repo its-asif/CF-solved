@@ -38,36 +38,49 @@
 #define C(x) cout<< x <<endl;
 #define F i.first
 #define S i.second
+// ll arr[100000000]={0};
+
 using namespace std;
-
 int main(){
-	
-	int n ; cin>>n;
- 	int arr[n];
- 	for (int i = 0; i < n; ++i)
- 	{
- 		cin>>arr[i];
- 	}
- 	sort(arr, arr+n);
- 	int cnt=0;
- 	int fst=0,lst=n-1;
- 	for (int i = lst; i >=  fst; --i)
- 	{
- 		if(arr[i]+arr[fst]>4){
- 			cnt++;
- 		}
- 		else{
- 			cnt++;
- 			int sum= arr[i];
+	llt{
+		lln;
+		vll v(n),v2(n);
+		ll ans;
+		fi(n){
+			cin>>v[i];
+			v2[i] = gcd(i+1,v[i]);
+			if(i==0) ans= v[i];
+			if(i!=0) ans = gcd(ans,v[i]);
+		}
+		// fa2(v2);
+		// cout<< ans sp;
 
- 			while(arr[fst]+sum<=4){
- 				sum+=arr[fst];
- 				fst++;
- 			}
- 		}
- 	}
- 	cout<<cnt;
+		if(ans==1) cout<<0 nl;
+		else if(gcd(ans,v2[n-1])==1) cout<<1 nl;
+		else if(gcd(ans,v2[n-2])==1) cout<<2 nl;
+		else cout<<3 nl;
+	}
 }
 
-// 1 2 3 3 4
 
+// 0
+// 1
+// 2
+// 2
+// 1
+// 3
+// 3
+// 0
+// 1
+
+
+// llt{
+//     	lln;
+//     	ll ans =0;
+//     	for (int i =1 ; i <= n; ++i)
+//     	{
+//     		ans += i* (i+i+1);
+//     		ans %= 1e9+7;
+//     	}
+//     	cout<< (ans*2022)%1e9+7 nl;
+//     }

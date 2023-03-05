@@ -38,36 +38,48 @@
 #define C(x) cout<< x <<endl;
 #define F i.first
 #define S i.second
+// ll arr[100000000]={0};
+
 using namespace std;
-
 int main(){
-	
-	int n ; cin>>n;
- 	int arr[n];
- 	for (int i = 0; i < n; ++i)
- 	{
- 		cin>>arr[i];
- 	}
- 	sort(arr, arr+n);
- 	int cnt=0;
- 	int fst=0,lst=n-1;
- 	for (int i = lst; i >=  fst; --i)
- 	{
- 		if(arr[i]+arr[fst]>4){
- 			cnt++;
- 		}
- 		else{
- 			cnt++;
- 			int sum= arr[i];
+    llt{
+    	ll n,k; cin>>n>>k;
+    	string s; cin>>s;
+    	std::map<char, ll> mp;
+    	ll coin=0;
+    	fi(n){
+    		mp[s[i]]++;
+    		if(s[i]>='A' && s[i]<='Z'){
+    			if(mp[s[i]+32]>0){
+    				coin++;
+    				mp[s[i]+32]--;
+    				mp[s[i]]--;
+    			}
+    		}
+    		else{
+    			if(mp[s[i]-32]>0){
+    				coin++;
+    				mp[s[i]-32]--;
+    				mp[s[i]]--;
+    			}
+    		}
 
- 			while(arr[fst]+sum<=4){
- 				sum+=arr[fst];
- 				fst++;
- 			}
- 		}
- 	}
- 	cout<<cnt;
+    	}
+
+    	int temp=0;
+    	for(auto i:mp){
+    		if(temp==k) break;
+    		if(S>=2){
+    			temp+=S/2;
+    		}
+    		// cout<<F sps S sp;
+    	}
+
+    	if(temp<k)
+	    	cout<<coin+temp nl;
+	    else cout<<coin+k nl;
+    }
 }
 
-// 1 2 3 3 4
-
+//u 65
+//l 97  //dif 32

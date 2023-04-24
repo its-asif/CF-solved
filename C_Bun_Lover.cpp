@@ -3,6 +3,7 @@
         Codeforces 1822C
         C. Bun Lover
 */
+
 #include<bits/stdc++.h>
 using namespace std;
 #define ll long long

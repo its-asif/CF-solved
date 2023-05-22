@@ -6,9 +6,6 @@
 #include<bits/stdc++.h>
 using namespace std;
 #define ll long long
-#define pb push_back
-#define yes cout << "YES"<<endl
-#define no cout << "NO" << endl
 
 int main() {
     int t; cin>>t; 
@@ -18,15 +15,16 @@ int main() {
         for (int i = 0; i < n; i++)
         {
             ll x; cin >> x;
-            if( x % 2) odd.pb(x);
-            else even.pb(x);
+            if( x % 2) odd.push_back(x);
+            else even.push_back(x);
         }
-        if(odd.size()==0 || even.size()==0) yes;
+        if(odd.size()==0 || even.size()==0) cout << "YES"<<endl;
         else{
-            sort(even.begin(),even.end());
-            sort(odd.begin(),odd.end());
-            if(odd[0] < even[0]) yes;
-            else no;
+            sort(even.begin(), even.end());
+            sort(odd.begin(), odd.end());
+
+            if(odd[0] < even[0]) cout << "YES"<<endl;
+            else cout << "NO" << endl;
         }
     }
 }

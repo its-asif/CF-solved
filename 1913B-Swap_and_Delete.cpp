@@ -20,7 +20,6 @@ int main(){
             }
         }
 
-        // cout << zero << ' ' << one << endl;
 
         for (int i = 0; i < s.size(); ++i)
         {
@@ -31,8 +30,7 @@ int main(){
             else{
                 if(one == 0) break;
                 one--;
-            }
-            // cout <<s[i] << ' '<< zero << ' ' << one << endl;
+            }        
         }
 
         cout << zero+one << endl;

@@ -1,4 +1,7 @@
 *.exe
 *.exe~
 *.in
+*.in~
 .vscode
+.cph
+test.cpp

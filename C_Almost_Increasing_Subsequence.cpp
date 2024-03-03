@@ -1,7 +1,6 @@
 /*
     Codeforces Round 869 (Div. 2)
-    Codeforces 1818C
-    Almost Increasing Subsequence
+    Codeforces 1818C : Almost Increasing Subsequence
 */
 #include <bits/stdc++.h>
 using namespace std;

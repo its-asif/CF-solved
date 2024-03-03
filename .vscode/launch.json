@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "d:/Codes/c++/CF-solved",
-      "program": "d:/Codes/c++/CF-solved/build/Debug/outDebug",
+      "cwd": "c:/Usable Folder/codes/c++/CF-solved",
+      "program": "c:/Usable Folder/codes/c++/CF-solved/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [

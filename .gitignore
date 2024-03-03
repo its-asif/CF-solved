@@ -5,3 +5,5 @@
 .vscode
 .cph
 test.cpp
+*.bin
+*.bin~

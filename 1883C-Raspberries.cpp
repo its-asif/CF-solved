@@ -19,8 +19,8 @@ int main()
 			mul = (mul % k) * arr[i];
 		}
 
-		if( mul % k == 0) cout << 0 << endl;
-		else if( k == 4){
+		if( mul % k == 0 ) cout << 0 << endl;
+		else if( k == 4 ){
 			bool four_mod = false;
 			for (int i = 0; i < n; ++i)
 			{
@@ -30,8 +30,7 @@ int main()
 				} 
 			}
 
-			if (four_mod)
-			{
+			if (four_mod){
 				cout << 1 << endl;
 				continue;
 			}

@@ -32,9 +32,7 @@ int main()
 		sort(vp2.rbegin(), vp2.rend());
 		sort(vp3.rbegin(), vp3.rend());
 
-		// for(auto i : vp1){
-		// 	cout << i.first << ' ' << i.second << endl;
-		// }
+
 
 
 		for (int i = 0; i < 3; ++i)
@@ -45,7 +43,6 @@ int main()
 				{
 					if (vp1[i].second != vp2[j].second and vp1[i].second != vp3[k].second and vp3[k].second != vp2[j].second)
 					{
-						// cout << vp1[i].second << ' ' << vp2[j].second << ' ' << vp3[k].second << endl;
 						ans = max(ans, vp1[i].first + vp2[j].first + vp3[k].first);
 					}
 				}

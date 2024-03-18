@@ -21,7 +21,7 @@ int main(){
 			indx += n;
 			ans.push_back(v[indx]);
 		}
-		ans.push_back(v[indx]+1);
+		ans.push_back(v[indx]);
 
 		for(auto i : ans) cout << i << ' ';
 		cout << endl;

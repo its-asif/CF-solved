@@ -23,7 +23,6 @@ int main(){
 			continue;
 		}
 
-
 		ll mx = 0;
 		queue<ll> q;
 		sum = 0;
@@ -37,7 +36,6 @@ int main(){
 				sum -= q.front();
 				q.pop();
 			}
-
 
 			mx = max(mx, (ll)(q.size()));
 		}
